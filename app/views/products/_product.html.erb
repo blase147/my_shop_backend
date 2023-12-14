@@ -1,0 +1,48 @@
+<div id="<%= dom_id product %>">
+  <p>
+    <strong>Image:</strong>
+    <% if product.product_image.attached? %>
+      <%= image_tag product.product_image.url %>
+    <% end %>
+  </p>
+  <p>
+    <strong>Name:</strong>
+    <%= product.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= product.description %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= product.price %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= product.category %>
+  </p>
+
+  <p>
+    <strong>Product type:</strong>
+    <%= product.product_type %>
+  </p>
+
+  <p>
+    <strong>Inventory:</strong>
+    <%= product.inventory %>
+  </p>
+
+  <p>
+    <strong>Discount:</strong>
+    <%= product.discount %>
+  </p>
+
+  <p>
+    <strong>Color:</strong>
+    <%= product.color %>
+  </p>
+
+</div>
