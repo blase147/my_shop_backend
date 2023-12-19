@@ -1,11 +1,14 @@
 <div id="<%= dom_id product %>">
-  <p>
-    <strong>Image:</strong>
-    <% if product.product_image.attached? %>
-      <%= image_tag product.product_image.url %>
-    <% end %>
-  </p>
-  <p>
+<p>
+  <strong>Image:</strong>
+  <% if product.product_image.present? && product.product_image.attached? %>
+    <%= image_tag product.product_image %>
+  <% else %>
+    No Image Available
+  <% end %>
+</p>
+
+<p>
     <strong>Name:</strong>
     <%= product.name %>
   </p>
